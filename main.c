@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "define.h"
-#include "highest_GPA.h"
-#include "lowest_GPA.h"
-#include "highest_BP.h"
 
 int main() {
     int numOfStudents;
