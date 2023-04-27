@@ -1,21 +1,24 @@
-#define TRANHUY 20
-#define TRONGNGHIA 20
-#define TRUONGHUY 20
-#define KHACCONG 20
-#define MINHDUC 20
-#define HOANGHA 20
-#define KIEN 20
-#define VANMANH 20
-#define PHUCTHINH 20
-#define THANHNAM 20
+#define TRAN_HUY 1
+#define TRONG_NGHIA 2
+#define TRUONG_HUY 3
+#define KHAC_CONG 4
+#define MINH_DUC 5
+#define HOANG_HA 6
+#define TRUNG_KIEN 7
+#define VAN_MANH 8
+#define PHUC_THINH 9
+#define THANH_NAM 10
+#define MAXIMUM_STUDENTS 1000
+#define CHARACTERS 21
+#define NUMBERS 11
 struct Student {
-    char studentID[20];
-    char lastName[20];
-    char firstName[20];
-    char birthdate[11];
-    char bir[11];
-    char thd[11];
-    char ate[11];
+    char studentID[CHARACTERS];
+    char lastName[CHARACTERS];
+    char firstName[CHARACTERS];
+    char birthdate[NUMBERS];
+    char bir[NUMBERS];
+    char thd[NUMBERS];
+    char ate[NUMBERS];
     float algebraGrade;
     float calculusGrade;
     float programmingGrade;
