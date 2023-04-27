@@ -38,31 +38,7 @@ int main() {
         // calculate GPA
         students[i].gpa = (students[i].algebraGrade + students[i].calculusGrade + students[i].programmingGrade) / 3.0;
     }
-
-    printf("\n");
-    printf("-----------------------------------------------------------------------------");
-    printf("\n\n");
-    //Print the student with highest GPA
-    struct Student highestGPAStudent = findHighestGPA(students, numOfStudents);
-    printf("Student with highest GPA:\n");
-    printf("Name: %s %s\n", highestGPAStudent.firstName, highestGPAStudent.lastName);
-    printf("GPA: %.2f\n", highestGPAStudent.gpa);
-    printf("\n");
-
-    //Print the student with lowest GPA
-    struct Student lowestGPAStudent = findLowestGPA(students, numOfStudents);
-    printf("Student with lowest GPA:\n");
-    printf("Name: %s %s\n", lowestGPAStudent.firstName, lowestGPAStudent.lastName);
-    printf("GPA: %.2f\n", lowestGPAStudent.gpa);
-    printf("\n");
-
-    //Print the student with highest BP grade
-    struct Student highestBPStudent = findHighestBP(students, numOfStudents);
-    printf("Student with highest BP grade:\n");
-    printf("Name: %s %s\n", highestBPStudent.firstName, highestBPStudent.lastName);
-    printf("Basic Programming grade: %.2f\n", highestBPStudent.programmingGrade);
     
-
     // print student list as a table to a text file
     FILE *file = fopen("student_list.txt", "w");
     fprintf(file, "+------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
