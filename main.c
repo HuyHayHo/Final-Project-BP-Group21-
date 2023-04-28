@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include "define.h"
+#include "highest_GPA.h"
+#include "lowest_GPA.h"
+#include "highest_BP.h"
 
 int main() {
     int numOfStudents;
@@ -8,7 +11,7 @@ int main() {
     {
         printf("Enter number of students (maximum 1000): ");
         scanf("%d", &numOfStudents);
-    } while (numOfStudents > 1000);
+    } while (numOfStudents > MAXIMUM_STUDENTS);
 
     struct Student students[numOfStudents];
 
@@ -35,7 +38,31 @@ int main() {
         // calculate GPA
         students[i].gpa = (students[i].algebraGrade + students[i].calculusGrade + students[i].programmingGrade) / 3.0;
     }
+
+    printf("\n");
+    printf("-----------------------------------------------------------------------------");
+    printf("\n\n");
+    //Print the student with highest GPA
+    struct Student highestGPAStudent = findHighestGPA(students, numOfStudents);
+    printf("Student with highest GPA:\n");
+    printf("Name: %s %s\n", highestGPAStudent.firstName, highestGPAStudent.lastName);
+    printf("GPA: %.2f\n", highestGPAStudent.gpa);
+    printf("\n");
+
+    //Print the student with lowest GPA
+    struct Student lowestGPAStudent = findLowestGPA(students, numOfStudents);
+    printf("Student with lowest GPA:\n");
+    printf("Name: %s %s\n", lowestGPAStudent.firstName, lowestGPAStudent.lastName);
+    printf("GPA: %.2f\n", lowestGPAStudent.gpa);
+    printf("\n");
+
+    //Print the student with highest BP grade
+    struct Student highestBPStudent = findHighestBP(students, numOfStudents);
+    printf("Student with highest BP grade:\n");
+    printf("Name: %s %s\n", highestBPStudent.firstName, highestBPStudent.lastName);
+    printf("Basic Programming grade: %.2f\n", highestBPStudent.programmingGrade);
     
+
     // print student list as a table to a text file
     FILE *file = fopen("student_list.txt", "w");
     fprintf(file, "+------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
@@ -43,7 +70,7 @@ int main() {
     fprintf(file, "+------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
 
     for (int i = 0; i < numOfStudents; i++) {
-        fprintf(file, "| %5.5s      | %-26s |    %1s/%2s/%3s   | %6.2f  | %6.2f  |%12.2f       | %6.2f |\n",
+        fprintf(file, "| %5s   | %-26s |    %1s/%2s/%3s   | %6.2f  | %6.2f  |%12.2f       | %6.2f |\n",
             students[i].studentID,
             strcat(strcat(students[i].lastName, " "), students[i].firstName),
             students[i].bir,
@@ -57,7 +84,6 @@ int main() {
     }
 
     fclose(file);
-    
-    
+
     return 0;
-}
+}   

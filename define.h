@@ -9,8 +9,8 @@
 #define PHUC_THINH 9
 #define THANH_NAM 10
 #define MAXIMUM_STUDENTS 1000
-#define CHARACTERS 21
-#define NUMBERS 11
+#define CHARACTERS 10000
+#define NUMBERS 10
 struct Student {
     char studentID[CHARACTERS];
     char lastName[CHARACTERS];
