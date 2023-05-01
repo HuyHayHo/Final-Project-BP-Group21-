@@ -5,9 +5,6 @@
 #include "define.h"
 #include "highest_GPA.h"
 #include "lowest_GPA.h"
-#include "highest_BP.h"
-#include "oldest_student.h"
-#include "youngest_student.h"
 
 int main() {
     
@@ -80,29 +77,6 @@ int main() {
     printf("Student with lowest GPA:\n");
     printf("Name: %s %s\n", lowestGPAStudent.firstName, lowestGPAStudent.lastName);
     printf("GPA: %.2f\n", lowestGPAStudent.gpa);
-    printf("\n");
-
-    //Print the student with highest BP grade
-    struct Student highestBPStudent = findHighestBP(students, numOfStudents);
-    printf("Student with highest BP grade:\n");
-    printf("Name: %s %s\n", highestBPStudent.firstName, highestBPStudent.lastName);
-    printf("Basic Programming grade: %.2f\n", highestBPStudent.programmingGrade);
-    printf("\n");
-
-    //Print the oldest student with ID, full name, and birthdate
-    struct Student oldestStudent = findOldestStudent(students, numOfStudents);
-    printf("Oldest student:\n");
-    printf("ID: %s\n", oldestStudent.studentID);
-    printf("Name: %s %s\n", oldestStudent.firstName, oldestStudent.lastName);
-    printf("Birthdate: %s/%s/%s\n", oldestStudent.bir, oldestStudent.thd, oldestStudent.ate);
-    printf("\n");
-
-    //Print the youngest student
-    struct Student youngestStudent = findYoungestStudent(students, numOfStudents);
-    printf("Youngest student:\n");
-    printf("ID: %s\n", youngestStudent.studentID);
-    printf("Name: %s %s\n", youngestStudent.firstName, youngestStudent.lastName);
-    printf("Birthdate: %s/%s/%s\n", youngestStudent.bir, youngestStudent.thd, youngestStudent.ate);
     printf("\n");
 
     // Print student list as a table to a text file
