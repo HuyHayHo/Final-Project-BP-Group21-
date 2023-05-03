@@ -88,6 +88,13 @@ int main() {
     printf("GPA: %.2f\n", lowestGPAStudent.gpa);
     printf("\n");
 
+    //Print the student with highest BP grade
+    struct Student highestBPStudent = findHighestBP(students, numOfStudents);
+    printf("Student with highest BP grade:\n");
+    printf("Name: %s %s\n", highestBPStudent.firstName, highestBPStudent.lastName);
+    printf("Basic Programming grade: %.2f\n", highestBPStudent.programmingGrade);
+    printf("\n");
+
     //Print the oldest student with ID, full name, and birthdate
     struct Student oldestStudent = findOldestStudent(students, numOfStudents);
     printf("Oldest student:\n");
