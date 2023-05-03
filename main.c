@@ -23,9 +23,7 @@ int main() {
     
     for (int i = 0; i < numOfStudents; i++) {
         printf("Enter information for student %d:\n", i+1);
-        printf("\n");
-        printf("Student ID: ");
-        printf("\n");
+        printf("\nStudent ID: ");
         scanf("%s", students[i].studentID);
         printf("\n");
         printf("Last Name: ");
@@ -45,7 +43,7 @@ int main() {
         scanf("%f", &students[i].calculusGrade);
         printf("Programming grade: ");
         scanf("%f", &students[i].programmingGrade);
-
+        printf("\n");
         // calculate GPA
         students[i].gpa = (students[i].algebraGrade + students[i].calculusGrade + students[i].programmingGrade) / 3.0;
     }
