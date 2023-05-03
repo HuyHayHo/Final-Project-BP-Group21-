@@ -23,7 +23,9 @@ int main() {
     
     for (int i = 0; i < numOfStudents; i++) {
         printf("Enter information for student %d:\n", i+1);
+        printf("\n");
         printf("Student ID: ");
+        printf("\n");
         scanf("%s", students[i].studentID);
         printf("\n");
         printf("Last Name: ");
@@ -134,7 +136,7 @@ int main() {
     printf("\n");
         }
     }
-    
+
     // Print student list as a table to a text file
     FILE *file = fopen("student_list.txt", "w");
     fprintf(file, "+-------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
