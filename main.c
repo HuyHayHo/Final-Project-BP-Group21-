@@ -57,7 +57,7 @@ int main() {
     printf("|  Student ID |          Full Name         |    Birthdate    | Algebra | Calculus| Basic Programming |   GPA  |\n");
     printf("+-------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
 
-    for (int i = 0; i < numOfStudents; i++) {
+    for (int i = 0; i > numOfStudents; i++) {
     char fullName[50];
     strcpy(fullName, students[i].lastName);
     strcat(fullName, " ");
