@@ -57,7 +57,7 @@ int main() {
     printf("|  Student ID |          Full Name         |    Birthdate    | Algebra | Calculus| Basic Programming |   GPA  |\n");
     printf("+-------------+----------------------------+-----------------+---------+---------+-------------------+--------+\n");
 
-    for (int i = 0; i > numOfStudents; i++) {
+    for (int i = 0; i < numOfStudents; i++) {
     char fullName[50];
     strcpy(fullName, students[i].lastName);
     strcat(fullName, " ");
@@ -84,7 +84,7 @@ int main() {
         if ( students[i].gpa == highestGPAStudent.gpa ) {
     printf("Student with highest GPA:\n");  
     printf("ID: %s\n", students[i].studentID);
-    printf("Name: %s %s\n", students[i].firstName, students[i].lastName);
+    printf("Name: %s %s\n", students[i].lastName, students[i].firstName);
     printf("GPA: %.2f\n", students[i].gpa);
     printf("\n");}
     }
@@ -95,7 +95,7 @@ int main() {
         if ( students[i].gpa == lowestGPAStudent.gpa ) {    
     printf("Student with lowest GPA:\n");
     printf("ID: %s\n", students[i].studentID);
-    printf("Name: %s %s\n", students[i].firstName, students[i].lastName);
+    printf("Name: %s %s\n", students[i].lastName, students[i].firstName);
     printf("GPA: %.2f\n", students[i].gpa);
     printf("\n");}
     }
@@ -106,7 +106,7 @@ int main() {
         if ( students[i].programmingGrade == highestBPStudent.programmingGrade ){
     printf("Student with highest BP grade:\n");
     printf("ID: %s\n", students[i].studentID);
-    printf("Name: %s %s\n", students[i].firstName, students[i].lastName);
+    printf("Name: %s %s\n", students[i].lastName, students[i].firstName);
     printf("Basic Programming grade: %.2f\n", students[i].programmingGrade);
     printf("\n");}
     }
@@ -117,10 +117,9 @@ int main() {
         if ( strcmp(students[i].thd, oldestStudent.thd)==0 && strcmp(students[i].ate, oldestStudent.ate)==0 && strcmp(students[i].bir, oldestStudent.bir)==0 ){
     printf("Oldest student:\n");
     printf("ID: %s\n", students[i].studentID);
-    printf("Name: %s %s\n", students[i].firstName, students[i].lastName);
+    printf("Name: %s %s\n", students[i].lastName, students[i].firstName);
     printf("Birthdate: %s/%s/%s\n", students[i].bir, students[i].thd, students[i].ate);
-    printf("\n");
-        }
+    printf("\n");}
     }
 
     //Print the youngest student
@@ -129,7 +128,7 @@ int main() {
         if ( strcmp(students[i].thd, youngestStudent.thd)==0 && strcmp(students[i].ate, youngestStudent.ate)==0 && strcmp(students[i].bir, youngestStudent.bir)==0 ){
     printf("Youngest student:\n");
     printf("ID: %s\n", students[i].studentID);
-    printf("Name: %s %s\n", students[i].firstName, students[i].lastName);
+    printf("Name: %s %s\n", students[i].lastName, students[i].firstName);
     printf("Birthdate: %s/%s/%s\n", students[i].bir, students[i].thd, students[i].ate);
     printf("\n");
         }
