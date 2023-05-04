@@ -125,7 +125,9 @@ int main() {
     //Print the youngest student
     struct Student youngestStudent = findYoungestStudent(students, numOfStudents);
     for (int i = 0; i < numOfStudents; i++) {
-        if ( strcmp(students[i].thd, youngestStudent.thd)==0 && strcmp(students[i].ate, youngestStudent.ate)==0 && strcmp(students[i].bir, youngestStudent.bir)==0 ){
+        if ( strcmp(students[i].thd, youngestStudent.thd)==0 
+            && strcmp(students[i].ate, youngestStudent.ate)==0 
+            && strcmp(students[i].bir, youngestStudent.bir)==0 ){
     printf("Youngest student:\n");
     printf("ID: %s\n", students[i].studentID);
     printf("Name: %s %s\n", students[i].lastName, students[i].firstName);
